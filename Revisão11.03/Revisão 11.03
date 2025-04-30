@@ -1,0 +1,442 @@
+Prova 11/03 | Notebook para Estudos
+Nome: Júlio Brenno Lopes Tavares
+Curso: Engenharia de Software
+Semestre: 3° Semestre
+Turma: N1
+1. Listas
+Características Principais:
+
+Ordenadas: Os elementos têm posições (índices) que vão de 0 em diante, podendo também ser acessados com índices negativos (começando do -1 para o último elemento) citeturn0file0.
+Mutáveis: Você pode alterar seus elementos, adicionar ou remover itens após a criação.
+Heterogêneas: Aceitam elementos de tipos diferentes, inclusive outras listas.
+Criação e Atribuição:
+
+Pode ser criada usando colchetes:
+x = [10, 5, 11, 0, 3]
+Listas vazias:
+x = []   # ou x = list()
+Principais Operadores e Métodos:
+
+Concatenação: Uso do operador + para unir listas e do * para repetir elementos.
+Modificação:
+append(valor) – adiciona um elemento no final.
+insert(indice, valor) – insere o valor na posição especificada.
+pop(indice) – remove e retorna o elemento da posição indicada.
+remove(valor) – remove a primeira ocorrência do valor.
+clear() – esvazia a lista.
+Outros Métodos:
+count(valor) – conta quantas vezes um valor aparece.
+index(valor) – retorna a posição da primeira ocorrência.
+Laço for e Operador in: Permitem iterar sobre os elementos e testar a presença de um item.
+List Comprehension: Forma compacta de criar novas listas, podendo incluir condições.
+Exemplo:
+A = [3, 4, 5, 10]
+soma1 = [i + 1 for i in A]
+Fatiamento (Slicing): A sintaxe [início:fim:passo] permite extrair sublistas.
+Exemplo:
+X = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+print(X[:: -1])  # Imprime a lista de trás para frente
+Esses conceitos e métodos são essenciais para manipulação e processamento de dados usando listas citeturn0file0.
+2. Tuplas
+Características Principais:
+
+Ordenadas e Heterogêneas: Assim como as listas, porém são imutáveis – ou seja, uma vez criada, não pode ser alterada.
+Criação: Utiliza parênteses ou a função tuple().
+Exemplo:
+x = ('a', 1, 2)
+Imutabilidade: Se a tupla contiver elementos mutáveis (como listas), estes podem ser modificados sem alterar a própria tupla.
+Exemplo:
+x = ([0, 1, 2], 2, 2)
+x[0][0] = 'mudei'
+Operadores: Pode ser concatenada com + e repetida com *; também suporta comparações usando operadores relacionais.
+Métodos Disponíveis: Apenas count() e index() estão disponíveis, além de poder usar dir(tuple) para listar métodos citeturn0file0.
+3. Dicionários
+Características Principais:
+
+Chave-Valor: Cada elemento é armazenado como par chave:valor, onde a chave é a "etiqueta" para acessar o valor.
+Mutáveis e Heterogêneos: Permitem alterações após a criação e os valores podem ser de tipos variados.
+Criação:
+X = {'idade': 21, 'matricula': 10000, 'nome': 'Joao'}
+Dicionários vazios podem ser criados com {} ou dict().
+Acesso e Métodos:
+Acesso direto por chave: X['idade'] retorna 21.
+get(chave, default) – retorna o valor associado ou um valor padrão se a chave não existir.
+Métodos úteis: clear(), copy(), items(), keys(), pop(), update(), entre outros.
+Iteração:
+Iterar somente pelas chaves:
+for chave in X:
+    print(chave)
+Iterar por chaves e valores:
+for chave, valor in X.items():
+    print(chave, valor)
+Esses pontos são cruciais para manipulação de dados complexos com dicionários citeturn0file0.
+4. Strings
+Características Principais:
+
+Sequência de Caracteres: São ordenadas, homogêneas (apenas caracteres) e imutáveis.
+
+Indexação e Fatiamento:
+Acesso individual aos caracteres funciona como em listas:
+
+P = 'Palavra'
+print(P[0])  # 'P'
+print(P[-1]) # 'a'
+Operadores:
+
+Concatenar com +: 'abc' + 'def' resulta em 'abcdef'.
+Repetir com *: 'abc' * 3 resulta em 'abcabcabc'.
+Métodos Comuns:
+
+capitalize(), lower(), upper(), split(), replace(), count(), index(), isalnum(), isalpha(), entre outros.
+capitalize()
+Descrição:
+Retorna uma nova string onde o primeiro caractere é convertido para maiúsculo e os demais para minúsculo.
+Exemplo:
+texto = "python é incrível"
+resultado = texto.capitalize()
+print(resultado)  # Saída: "Python é incrível"
+Uso:
+Útil para padronizar títulos ou nomes, garantindo que a primeira letra seja maiúscula.
+lower()
+Descrição:
+Retorna uma cópia da string com todos os caracteres convertidos para minúsculo.
+Exemplo:
+texto = "Python É Incrível"
+resultado = texto.lower()
+print(resultado)  # Saída: "python é incrível"
+Uso:
+Essencial para comparações de texto sem considerar diferenças entre maiúsculas e minúsculas.
+upper()
+Descrição:
+Retorna uma nova string com todos os caracteres convertidos para maiúsculo.
+Exemplo:
+texto = "Python é incrível"
+resultado = texto.upper()
+print(resultado)  # Saída: "PYTHON É INCRÍVEL"
+Uso:
+Usado para exibir textos de forma padronizada ou para comparações quando se quer ignorar a caixa dos caracteres.
+split()
+Descrição:
+Divide a string em uma lista de substrings, utilizando como delimitador (por padrão, espaço em branco) ou um caractere especificado.
+
+Exemplos:
+
+frase = "Python é incrível"
+palavras = frase.split()
+print(palavras)  # Saída: ['Python', 'é', 'incrível']
+
+dados = "maçã,banana,laranja"
+frutas = dados.split(",")
+print(frutas)  # Saída: ['maçã', 'banana', 'laranja']
+Uso:
+Muito útil para processar textos, como separar palavras ou dividir dados de uma string em elementos individuais.
+
+replace()
+Descrição:
+Retorna uma nova string na qual todas as ocorrências de uma substring especificada são substituídas por outra.
+Exemplo:
+texto = "Eu gosto de maçã. Maçã é saudável."
+novo_texto = texto.replace("maçã", "banana")
+print(novo_texto)
+# Saída: "Eu gosto de banana. Banana é saudável."
+Uso:
+Usado para correções ou formatação de textos, substituindo palavras ou caracteres.
+count()
+Descrição:
+Retorna o número de vezes que uma substring aparece na string.
+Exemplo:
+texto = "banana"
+ocorrencias = texto.count("an")
+print(ocorrencias)  # Saída: 2
+Uso:
+Importante para análises e estatísticas em textos, como contagem de palavras ou padrões específicos.
+index()
+Descrição:
+Retorna o índice da primeira ocorrência de uma substring na string. Se a substring não for encontrada, gera um ValueError.
+
+Exemplo:
+
+texto = "banana"
+posicao = texto.index("na")
+print(posicao)  # Saída: 2
+
+# Exemplo de erro (descomente para testar):
+# print(texto.index("z"))
+Uso:
+Permite localizar a posição de um padrão dentro da string. Diferencia-se do método find(), que retorna -1 se não encontrar a substring, enquanto index() gera um erro.
+
+isalnum()
+Descrição:
+Retorna True se todos os caracteres da string forem alfanuméricos (letras ou dígitos) e a string não estiver vazia; caso contrário, retorna False.
+Exemplo:
+s1 = "Python123"
+s2 = "Python 123"
+print(s1.isalnum())  # Saída: True
+print(s2.isalnum())  # Saída: False (devido ao espaço)
+Uso:
+Utilizado para validações de entrada, garantindo que a string não contenha símbolos ou espaços indesejados.
+isalpha()
+Descrição:
+Retorna True se todos os caracteres da string forem apenas letras (alfabéticos) e a string não estiver vazia; caso contrário, retorna False.
+Exemplo:
+s1 = "Python"
+s2 = "Python3"
+print(s1.isalpha())  # Saída: True
+print(s2.isalpha())  # Saída: False (devido ao dígito "3")
+Uso:
+Muito útil para validação de nomes ou palavras onde números ou símbolos não são permitidos.
+Outros Métodos Úteis em Strings
+strip()
+Descrição:
+Remove espaços em branco (ou outros caracteres especificados) do início e do fim da string.
+Exemplo:
+texto = "  Olá, mundo!  "
+print(texto.strip())  # Saída: "Olá, mundo!"
+startswith() e endswith()
+Descrição:
+startswith(substring): Verifica se a string começa com a substring especificada.
+endswith(substring): Verifica se a string termina com a substring especificada.
+Exemplos:
+texto = "Python é incrível"
+print(texto.startswith("Python"))  # Saída: True
+print(texto.endswith("incrível"))    # Saída: True
+join()
+Descrição:
+Une os elementos de um iterável (por exemplo, uma lista de strings) em uma única string, utilizando a string em que o método é chamado como separador.
+Exemplo:
+palavras = ["Python", "é", "incrível"]
+resultado = " ".join(palavras)
+print(resultado)  # Saída: "Python é incrível"
+find()
+Descrição:
+Retorna o índice da primeira ocorrência de uma substring. Se a substring não for encontrada, retorna -1, sem gerar exceção.
+Exemplo:
+texto = "banana"
+pos = texto.find("na")
+print(pos)  # Saída: 2
+print(texto.find("z"))  # Saída: -1
+swapcase()
+Descrição:
+Retorna uma nova string onde as letras maiúsculas são convertidas para minúsculas e vice-versa.
+Exemplo:
+texto = "Python"
+print(texto.swapcase())  # Saída: "pYTHON"
+title()
+Descrição:
+Retorna uma nova string onde a primeira letra de cada palavra é convertida para maiúsculo e as demais para minúsculo.
+Exemplo:
+texto = "python é incrível"
+print(texto.title())  # Saída: "Python É Incrível"
+Resumo
+Cada um desses métodos retorna uma nova string, mantendo a imutabilidade dos objetos string em Python. Eles são fundamentais para:
+
+Formatação: capitalize(), lower(), upper(), title()
+Divisão e Junção: split(), join()
+Substituição e Contagem: replace(), count()
+Busca e Validação: index(), find(), isalnum(), isalpha()
+Limpeza e Verificação de Início/Fim: strip(), startswith(), endswith()
+Comparações: Operadores relacionais com strings comparam alfabeticamente
+1. Listas
+Características Importantes:
+
+Ordenadas: Os elementos possuem índices (0, 1, 2, …) e podem ser acessados diretamente.
+Mutáveis: Você pode alterar, adicionar ou remover elementos.
+Heterogêneas: Aceitam elementos de diferentes tipos, inclusive outras listas.
+Exemplo de Código:
+
+# Criação de uma lista
+lista_exemplo = [10, 20, 30, 40, 50]
+print("Lista original:", lista_exemplo)
+
+# Adicionando um novo elemento com append()
+lista_exemplo.append(60)
+print("Após append:", lista_exemplo)
+
+# Alterando um elemento na lista (por exemplo, mudando o primeiro elemento para 5)
+lista_exemplo[0] = 5
+print("Após alteração:", lista_exemplo)
+
+# Fatiamento (slicing): extrair uma sublista do índice 1 ao 3 (o índice 4 não é incluído)
+sublista = lista_exemplo[1:4]
+print("Sublista (índices 1 a 3):", sublista)
+
+# List Comprehension: criar uma nova lista com cada elemento multiplicado por 2
+lista_dobrada = [x * 2 for x in lista_exemplo]
+print("Lista com elementos dobrados:", lista_dobrada)
+O que você deve estudar:
+
+Operadores de concatenação (+) e repetição (*)
+Métodos como append(), insert(), pop(), remove(), clear(), count() e index()
+Fatiamento (slicing) e uso de índices negativos
+Uso de list comprehension para criação compacta de novas listas
+2. Tuplas
+Características Importantes:
+
+Ordenadas e Heterogêneas: Assim como as listas, mas...
+Imutáveis: Uma vez definida, não permite alteração dos seus elementos.
+(Note: se a tupla contiver elementos mutáveis (por exemplo, listas), estes poderão ser modificados individualmente.)
+Exemplo de Código:
+
+# Criação de uma tupla
+tupla_exemplo = (10, 20, 30, 40, 50)
+print("Tupla original:", tupla_exemplo)
+
+# Tentativa de alteração gera erro (descomente para testar)
+# tupla_exemplo[0] = 5  # Isso gera um TypeError, pois tuplas são imutáveis
+
+# Acessando elementos da tupla
+primeiro_elemento = tupla_exemplo[0]
+print("Primeiro elemento da tupla:", primeiro_elemento)
+
+# Mesmo sendo imutável, podemos concatenar tuplas:
+nova_tupla = tupla_exemplo + (60, 70)
+print("Tupla concatenada:", nova_tupla)
+O que você deve estudar:
+
+Criação de tuplas usando parênteses ou a função tuple()
+Imutabilidade e as implicações disso na manipulação de dados
+Operadores de concatenação (+) e repetição (*)
+Métodos disponíveis (basicamente count() e index())
+3. Dicionários
+Características Importantes:
+
+Estrutura de Chave:Valor: Cada elemento é armazenado com uma etiqueta (chave) e um valor.
+Mutáveis: Permitem alteração, inserção e remoção de pares.
+Não Ordenados: A ordem dos itens não é garantida (em versões mais recentes do Python a ordem de inserção é preservada, mas o conceito fundamental é o acesso por chave).
+Exemplo de Código:
+
+# Criação de um dicionário
+dicionario_exemplo = {
+    'nome': 'João',
+    'idade': 21,
+    'curso': 'Engenharia'
+}
+print("Dicionário original:", dicionario_exemplo)
+
+# Acessando um valor pelo nome da chave
+print("Nome:", dicionario_exemplo['nome'])
+
+# Alterando o valor de uma chave
+dicionario_exemplo['idade'] = 22
+print("Dicionário atualizado:", dicionario_exemplo)
+
+# Iterando sobre o dicionário (chaves e valores)
+for chave, valor in dicionario_exemplo.items():
+    print(chave, "->", valor)
+
+# Usando o método get() com valor padrão
+print("Valor para 'nota':", dicionario_exemplo.get('nota', 'Não encontrado'))
+O que você deve estudar:
+
+Criação de dicionários usando {} ou dict()
+Acesso aos valores por meio das chaves e a diferença entre acesso direto (dicionario['chave']) e o método get()
+Métodos como clear(), copy(), items(), keys(), pop(), update()
+Iteração sobre os itens com loops
+1. Contar a frequência dos nomes em uma lista (Dicionário)
+nomes = ['Ana', 'João', 'Maria', 'Ana', 'João', 'Pedro', 'Maria', 'Maria']
+contagem = {}
+
+for nome in nomes:
+    contagem[nome] = contagem.get(nome, 0) + 1
+
+print(contagem)
+2. Ler nomes do usuário e contar as ocorrências
+nomes = []
+while True:
+    nome = input("Digite um nome (ou pressione Enter para sair): ")
+    if nome == "":
+        break
+    nomes.append(nome)
+
+contagem = {}
+for nome in nomes:
+    contagem[nome] = contagem.get(nome, 0) + 1
+
+print(contagem)
+3. Censurar nomes próprios em uma frase
+mensagem = input("Digite uma frase: ")
+palavras = mensagem.split()
+nova_mensagem = []
+
+for palavra in palavras:
+    if palavra[0].isupper() and palavra.isalpha():
+        nova_mensagem.append('*' * len(palavra))
+    else:
+        nova_mensagem.append(palavra)
+
+print(" ".join(nova_mensagem))
+4. Produto escalar e vetorial de dois vetores
+import numpy as np
+
+vetor1 = [int(input(f"Digite o {i+1}º número do primeiro vetor: ")) for i in range(3)]
+vetor2 = [int(input(f"Digite o {i+1}º número do segundo vetor: ")) for i in range(3)]
+
+produto_escalar = np.dot(vetor1, vetor2)
+produto_vetorial = np.cross(vetor1, vetor2)
+
+print(f"Produto Escalar: {produto_escalar}")
+print(f"Produto Vetorial: {produto_vetorial}")
+5. Ler N números e armazenar em uma lista
+N = int(input("Quantos números deseja inserir? "))
+numeros = [int(input(f"Digite o {i+1}º número: ")) for i in range(N)]
+print("Lista de números:", numeros)
+6. Cálculo de soma, média, maior e menor número
+soma = sum(numeros)
+media = soma / len(numeros)
+maior = max(numeros)
+menor = min(numeros)
+
+print(f"Soma: {soma}")
+print(f"Média: {media}")
+print(f"Maior número: {maior}")
+print(f"Menor número: {menor}")
+Listas
+# Criando uma lista e manipulando seus elementos
+lista = [10, 20, 30, 40, 50]
+
+# Adicionando um elemento à lista
+lista.append(60)
+
+# Removendo um elemento da lista
+lista.remove(30)
+
+# Acessando um elemento da lista
+print("Elemento na posição 2:", lista[2])
+
+# Ordenando a lista
+lista.sort()
+
+# Exibindo a lista final
+print("Lista final:", lista)
+Tuplas
+# Criando uma tupla
+tupla = (100, 200, 300, 400, 500)
+
+# Acessando elementos da tupla
+print("Primeiro elemento da tupla:", tupla[0])
+
+# Tentando modificar um elemento da tupla (isso causará erro, pois tuplas são imutáveis)
+# tupla[1] = 250  # Isso resultará em um erro!
+
+# Concatenando tuplas
+nova_tupla = tupla + (600, 700)
+print("Nova tupla concatenada:", nova_tupla)
+Dicionários
+# Criando um dicionário
+dados_aluno = {
+    "nome": "Brayan",
+    "idade": 21,
+    "curso": "Engenharia de Software"
+}
+
+# Acessando valores do dicionário
+print("Nome do aluno:", dados_aluno["nome"])
+
+# Adicionando uma nova chave-valor ao dicionário
+dados_aluno["matricula"] = 38473585
+
+# Removendo um item do dicionário
+del dados_aluno["idade"]
+
+# Exibindo o dicionário atualizado
+print("Dicionário atualizado:", dados_aluno)
