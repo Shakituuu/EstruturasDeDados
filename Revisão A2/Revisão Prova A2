@@ -1,0 +1,140 @@
+Avaliação A2 | Revisão
+Nome: Júlio Brenno Lopes Tavares
+Curso: Engenharia de Software
+Semestre: 2° Semestre
+Turma: N1
+Lista de Revisão para Prova de Estrutura de Dados I utilizando a linguagem Python
+Listas (Arrays Dinâmicos):
+
+Criação e manipulação de listas.
+Acesso a elementos por índice.
+Slicing de listas.
+Métodos importantes de listas (append(), insert(), remove(), pop(), index(), count(), sort(), reverse(), clear(), copy()).
+List comprehensions.
+Diferenças entre listas e tuplas.
+Filas (Queues):
+
+Conceito de FIFO (First-In, First-Out).
+Implementação de filas usando listas (com suas limitações de performance para pop(0) e insert(0)).
+Uso da classe collections.deque para implementações eficientes de filas.
+Operações básicas de filas: enqueue (adicionar), dequeue (remover), peek (espiar), is_empty (verificar se está vazia), size (tamanho).
+Pilhas (Stacks):
+
+Conceito de LIFO (Last-In, First-Out).
+Implementação de pilhas usando listas (aproveitando os métodos append() e pop()).
+Operações básicas de pilhas: push (empilhar), pop (desempilhar), peek (topo), is_empty (vazia), size (tamanho).
+Vetores (Arrays):
+
+Conceito de arrays (sequências de elementos do mesmo tipo).
+Utilização do módulo array do Python para criar arrays de tipos específicos.
+Operações básicas com arrays: acesso, iteração.
+Vantagens e desvantagens em relação a listas (tipo fixo, geralmente mais eficientes em termos de memória para grandes quantidades de dados do mesmo tipo).
+Matrizes (Arrays Bidimensionais):
+
+Representação de matrizes usando listas de listas em Python.
+Acesso a elementos em matrizes (linha e coluna).
+Iteração sobre matrizes.
+Operações básicas com matrizes (adição, multiplicação - conceitualmente).
+Utilização da biblioteca NumPy para manipulação eficiente de arrays multidimensionais (conceitos básicos).
+Questões de Múltipla Escolha
+Qual das seguintes estruturas de dados segue o princípio LIFO (Last-In, First-Out)?
+
+a) Fila
+
+b) Lista
+
+c) Pilha
+
+d) Vetor
+
+Qual método é comumente usado para adicionar um elemento ao final de uma lista em Python?
+
+a) insert()
+
+b) add()
+
+c) append()
+
+d) extend()
+
+Qual das seguintes operações remove e retorna o elemento do início de uma fila implementada com uma lista padrão do Python?
+
+a) pop()
+
+b) pop(0)
+
+c) dequeue()
+
+d) remove(0)
+
+Qual módulo do Python é mais eficiente para criar arrays de tipos numéricos específicos?
+
+a) collections
+
+b) array
+
+c) numpy
+
+d) math
+
+Como você acessaria o elemento na segunda linha e terceira coluna de uma matriz chamada matriz representada como uma lista de listas em Python?
+
+a) matriz[1][2]
+
+b) matriz[2][1]
+
+c) matriz(2, 3)
+
+d) matriz{2, 3}
+
+Questões de Análise de Código
+Analise o código Python a seguir e determine a saída ou o comportamento esperado.
+
+Questão 1 (Listas):
+
+numeros = [10, 20, 30, 40, 50]
+numeros.insert(2, 25)
+del numeros[4]
+print(numeros)
+
+[10, 20, 25, 30, 50]
+
+Questão 2 (Pilhas):
+
+pilha = []
+pilha.append(1)
+pilha.append(2)
+pilha.append(3)
+pilha.pop()
+pilha.append(4)
+print(pilha)
+
+[1, 2, 4]
+
+Questão 3 (List Comprehension):
+
+quadrados = [x**2 for x in range(5) if x % 2 == 0]
+print(quadrados)
+
+[0, 4, 16]
+
+Questão 4 (Matrizes):
+
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+soma = 0
+for linha in matriz:
+    soma += linha[1]
+print(soma)
+
+15
+
+Questão 5 (Filas com deque):
+
+from collections import deque
+fila = deque([100, 200])
+fila.append(300)
+fila.popleft()
+fila.appendleft(50)
+print(list(fila))
+
+[50, 200, 300]
