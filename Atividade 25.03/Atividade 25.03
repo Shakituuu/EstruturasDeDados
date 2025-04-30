@@ -1,0 +1,27 @@
+Atividade 25/03 | O Jogo da Imitação e a Estruturas de Dados
+Nome: Júlio Brenno Lopes Tavares
+Curso: Engenharia de Software
+Semestre: 2° Semestre
+Turma: N1
+Questões Relacionadas ao Filme O Jogo da Imitação
+Fila
+Pergunta:
+Durante a decodificação do código Enigma, imagine que as combinações de letras possíveis sejam armazenadas em uma fila. Explique como o uso de uma fila pode organizar o processamento das combinações, garantindo que cada tentativa seja analisada na ordem correta.
+
+Resposta:
+Uma fila funciona de maneira que as combinações de letras são testadas uma de cada vez, na ordem em que chegaram. Isso ajuda a garantir que nenhuma combinação seja esquecida ou testada fora de sequência. Em outras palavras, a fila organiza tudo para que as tentativas sejam feitas em ordem, e a próxima só acontece depois da anterior ser testada completamente.
+
+Pilha
+Pergunta:
+Caso os testes falhem e seja necessário reverter algumas decisões, como você utilizaria uma pilha para armazenar os passos anteriores e retornar ao estado inicial mais rapidamente?
+
+Resposta:
+Se um teste não der certo, uma pilha ajuda a "voltar atrás". Isso é como quando você desfaz um erro em um jogo ou em uma tarefa. Você vai para o último ponto onde estava antes e tenta novamente. Então, a pilha funciona como uma forma de armazenar decisões passadas, para que, se necessário, você possa reverter rapidamente para um ponto anterior e tentar outra solução.
+
+Lista
+Pergunta:
+Suponha que a máquina precise manter uma lista dos padrões de palavras já testados. Como a lista pode ser utilizada para garantir que padrões repetidos não sejam testados novamente? Discuta as vantagens de usar uma lista encadeada em vez de um vetor nesse caso.
+
+Resposta:
+A lista ajudaria a máquina a lembrar de todas as palavras já testadas, evitando que ela tente as mesmas combinações várias vezes. Usar uma lista encadeada facilita a adição e remoção de palavras sem precisar reorganizar tudo o tempo todo. Isso é útil, porque significa que a máquina pode verificar rapidamente quais padrões já foram tentados e continuar de onde parou, sem desperdício de tempo.
+
